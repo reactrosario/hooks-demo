@@ -4,6 +4,7 @@ import First from './First';
 import Second from './Second';
 import Third from './Third'
 import Fourth from './Fourth';
+import CustomHooks from './CustomHooks';
 
 const WithHooks = ({ level }) => {
   return (
@@ -25,13 +26,20 @@ const WithHooks = ({ level }) => {
           </Container>
         )
       }
-       {
+      {
         level > 2 && (
           <Container>
             <Fourth />
           </Container>
         )
       }
+      {
+        level > 3 && (
+          <Container>
+            <CustomHooks />
+          </Container>
+        )
+      }      
     </Fragment>
   )
 }

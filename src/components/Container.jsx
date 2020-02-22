@@ -1,26 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import React from "react";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
 
 const styles = {
   container: {
-    height: 400,
-  },
+    height: 250
+  }
 };
 
-const Container = (props) => {
+const Container = props => {
   const { classes, children } = props;
 
-  return (
-    <div className={classes.container}>
-      {children}
-    </div>
-  );
-}
+  return <div className={classes.container}>{children}</div>;
+};
 
 Container.propTypes = {
   classes: PropTypes.object.isRequired,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default withStyles(styles)(Container);

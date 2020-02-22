@@ -1,39 +1,33 @@
-import React, { Fragment } from 'react';
-import Container from '../components/Container';
-import First from './First';
-import Second from './Second';
-import Third from './Third'
-import Fourth from './Fourth';
+import React, { Fragment } from "react";
+import Container from "../components/Container";
+import State from "./State";
+import MultipleInputs from "./MultipleInputs";
+import RequestDemo from "./RequestDemo";
+import FormDemo from "./FormDemo";
 
 const WithHooks = ({ level }) => {
   return (
     <Fragment>
       <Container>
-        <First />
+        <State />
       </Container>
-      {
-        level > 0 && (
-          <Container>
-            <Second />
-          </Container>
-        )
-      }
-      {
-        level > 1 && (
-          <Container>
-            <Third />
-          </Container>
-        )
-      }
-       {
-        level > 2 && (
-          <Container>
-            <Fourth />
-          </Container>
-        )
-      }
+      {level > 0 && (
+        <Container>
+          <MultipleInputs />
+        </Container>
+      )}
+      {level > 1 && (
+        <Container>
+          <RequestDemo />
+        </Container>
+      )}
+      {level > 2 && (
+        <Container>
+          <FormDemo />
+        </Container>
+      )}
     </Fragment>
-  )
-}
+  );
+};
 
 export default WithHooks;

@@ -2,9 +2,9 @@ import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import Container from "../components/Container";
 import State from "./State";
-import Second from "./Second";
-import Third from "./Third";
-import Fourth from "./Fourth";
+import MultipleInputs from "./MultipleInputs";
+import RequestDemo from "./RequestDemo";
+import FormDemo from "./FormDemo";
 
 class WithoutHooks extends Component {
   render() {
@@ -16,17 +16,17 @@ class WithoutHooks extends Component {
         </Container>
         {level > 0 && (
           <Container>
-            <Second />
+            <MultipleInputs />
           </Container>
         )}
         {level > 1 && (
           <Container>
-            <Third />
+            <RequestDemo />
           </Container>
         )}
         {level > 2 && (
           <Container>
-            <Fourth />
+            <FormDemo />
           </Container>
         )}
       </Fragment>

@@ -16,6 +16,7 @@ const styles = {
   },
   button: {
     background: '#84EEFF',
+    margin: '2%',
   },
   headers : {
     color: '#84EEFF'
